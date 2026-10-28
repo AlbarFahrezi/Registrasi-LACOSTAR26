@@ -100,7 +100,7 @@ function view(){
   return `<div class="ticket"><div class="main">
     <div class="f${err.sekolah?' bad':''}"><label for="sekolah">Nama sekolah <span class="req">*</span></label><input class="in" id="sekolah" autocomplete="off" placeholder="Contoh:SMKN 1 SUBANG" value="${E(vals.sekolah)}"><p class="em">Pertanyaan ini wajib diisi.</p></div>
     <div class="f${err.nourut?' bad':''}"><label for="nourut">No urut <span class="req">*</span></label><input class="in" id="nourut" inputmode="numeric" autocomplete="off" placeholder="Contoh:01" value="${E(vals.nourut)}"><p class="em">Isi dengan angka.</p></div>
-    ${msg?`<p class="msg">${E(msg)}</p>`:''}<button class="btn" id="send"${sending?' disabled':''}>${sending?'Mengirim…':'Kirim jawaban'}</button>
+    ${msg?`<p class="msg">${E(msg)}</p>`:''}<button class="btn" id="send"${sending?' disabled':''}>${sending?'Mengirim…':'Kirim Request'}</button>
   </div>${stub(vals)}</div>`;
 }
 function render(){app.innerHTML=view()}
